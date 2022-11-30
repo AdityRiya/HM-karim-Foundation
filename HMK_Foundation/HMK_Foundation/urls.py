@@ -17,6 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from HM_FoundationApp import views
 urlpatterns = [
-    path("admin/", admin.site.urls),
+   
     path("",views.index),
+    path("allMember",views.allmember),
+    path("chairman",views.chairman),
+    path("misson",views.mission),
+    path("sevices",views.services),
+    path("vision",views.vision),
 ]
