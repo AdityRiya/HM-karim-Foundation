@@ -15,3 +15,5 @@ def services(request):
     return render(request,'services.html')
 def vision(request):
     return render(request,'vision.html')
+def secretary(request):
+    return render(request,'secretary.html')
