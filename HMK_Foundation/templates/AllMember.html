@@ -55,33 +55,22 @@
                     <table class="table table-one table-hover text-center my-4">
                         <thead>
                           <tr>
-                            <th>ক্রমিক</th>
+                            
                             <th>নাম</th>
                             <th>পদবী</th>
                             <th>মোবাইল নং</th>
                           </tr>
                         </thead>
                         <tbody>
+                          {% for n in acData %}
                           <tr>
-                            <td>১</td>
-                            <td>জনাব মোঃ মাইকেল বাবু</td>
-                            <td>চেয়ারম্যান</td>
-                            <td>01749660122</td>
+                            
+                            <td>{{n.ac_name}}</td>
+                            <td>{{n.ac_post}}</td>
+                            <td>{{n.ac_number}}</td>
                           </tr>
-                          <tr>
-                            <td>২</td>
-                            <td>জনাব গিয়াস উদ্দিন</td>
-                            <td>ভাইস চেয়ারম্যান</td>
-                            <td>01741656492
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>৩</td>
-                            <td>জনাব মোহাম্মদ আলী ( ও সি )</td>
-                            <td>ভাইস চেয়ারম্যান</td>
-                            <td>01712133466
-                            </td>
-                          </tr>
+                          {% endfor %}
+                         
                         </tbody>
                       </table>
                 </div>

@@ -23,7 +23,7 @@ urlpatterns = [
     path("chairman",views.chairman,name='chairman'),
     path("misson",views.mission,name='mission'),
     path("sevices",views.services,name='services'),
-    path("vision",views.vision,name='vision'),
+    path("donation",views.donation,name='donation'),
     path("contact",views.contact,name='contact'),
     path("secretary",views.secretary,name='secretary'),
 ]
