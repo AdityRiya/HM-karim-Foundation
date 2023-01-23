@@ -9,12 +9,14 @@
         list-style: none !important;
         display: flex;
         padding-top: 5px;
-
-       
-    
     }
     .marquee .news{
         background: rgba(0, 180, 54, 0.76);
+    }
+    .marquee-image img{
+        width: 200px;
+        height: 200px;
+        border: 3px solid rgba(0, 180, 54, 0.76) ;
     }
 </style>
 <div class="container-fluid">
@@ -104,14 +106,14 @@
         </div>
     </div>
     <div class="container-fluid">
-        <div class='row marquee '>
-            <div class='col-3 col-md-2 news'>
-              <p class='text-center pt-2 text-white '><b>kkkkkkkkkkkkk</b></p>
-            </div>
-            <div class='col-9 col-md-10  '>
+        <div class='row marquee-image '>
+            
+            <div class='col-12 col-md-12  '>
               <marquee behavior='' direction=''>
                 <ul>
-                  <li><small><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, tenetur expedita eveniet impedit totam cum laudantium cumque ratione beatae corrupti deserunt exercitationem dolorem quasi nulla architecto maxime ullam distinctio recusandae.</b></small></li>
+                  <li>
+                    <img src="{%static "assets/hm karim foundation image 3.webp" %} " alt="">
+                  </li>
                 </ul>
               </marquee>
              </div>
