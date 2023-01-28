@@ -17,6 +17,18 @@ class Adviser_Counsil(models.Model):
         return self.ac_name
         return self.ac_post
         return self.ac_number
+    
+class Add_News(models.Model):
+    news = models.CharField(max_length=3168)
+    
+    def __str__(self):
+        return self.news
+       
+class Add_Image(models.Model):
+    images = models.ImageField(upload_to ="images/")
+    
+    
+       
 # class EC_Post(models.Model):
 #     name = models.ForeignKey('Executive_Counsil',
 #     on_delete=models.CASCADE)

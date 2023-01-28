@@ -1,9 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from HM_FoundationApp.models import Executive_Counsil,Adviser_Counsil
+from HM_FoundationApp.models import Executive_Counsil,Adviser_Counsil,Add_News,Add_Image
 # Create your views here.
 def index(request):
-    return render(request,'index.html')
+    anData = Add_News.objects.all()
+    imageData = Add_Image.objects.all()
+    data={
+        'anData':anData,
+        'imageData':imageData
+    }
+    return render(request,'index.html',data)
+    
+    
 def allmember(request):
     ecData = Executive_Counsil.objects.all()
     acData = Adviser_Counsil.objects.all()

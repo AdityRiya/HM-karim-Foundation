@@ -14,8 +14,9 @@
         background: rgba(0, 180, 54, 0.76);
     }
     .marquee-image img{
-        width: 200px;
-        height: 200px;
+        {% comment %} width: 200px;
+        height: 200px; {% endcomment %}
+        margin: 5px;
         border: 3px solid rgba(0, 180, 54, 0.76) ;
     }
     .marquee-image-div{
@@ -31,7 +32,10 @@
         <div class='col-9 col-md-10  '>
           <marquee behavior='' direction=''>
             <ul>
-              <li><small><b>হাফেজ মমতাজুল করিম ফাউন্ডেশনের প্রথম সাধারণ সভা অনুষ্ঠিত।</b></small></li>
+                {% for n in anData %}
+                <li><small><b>  {{n.news}}  |  </b></small></li>          
+                {% endfor %}
+             
             </ul>
           </marquee>
          </div>
@@ -124,9 +128,11 @@
 
               <marquee behavior='' direction=''>
                 <ul>
-                  <li>
-                    <img src="{%static "assets/hm karim foundation image 3.webp" %} " alt="">
-                  </li>
+                    
+                    <li><img src="{{ images.url }}" alt=""></li>
+                           
+                    
+                  
                 </ul>
               </marquee>
              </div>
